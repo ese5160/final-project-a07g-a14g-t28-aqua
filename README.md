@@ -12,3 +12,4 @@ This codebase will be used first in A07G Exploring the CLI, then will be expande
 * [VS Code](https://code.visualstudio.com/) is heavily recommended to develop code and handle Git commits
   * Code formatting and extension recommendation files come with this repository.
   * Ctrl+Shift+V will render the README.md (maybe not the images though)
+

@@ -1,0 +1,88 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0" version="26.1.1">
+  <diagram name="第 1 页" id="Ay5rzWE2ONiPf5jQf8Lk">
+    <mxGraphModel dx="1426" dy="868" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="5YEp5wDfop_LUUZbk5wP-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5YEp5wDfop_LUUZbk5wP-1" target="5YEp5wDfop_LUUZbk5wP-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5YEp5wDfop_LUUZbk5wP-1" value="User types a character" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="135" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5YEp5wDfop_LUUZbk5wP-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5YEp5wDfop_LUUZbk5wP-2" target="5YEp5wDfop_LUUZbk5wP-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5YEp5wDfop_LUUZbk5wP-2" value="Hardware interrupt triggered(_SERCOM_INTERRUPT_HANDLER)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="235" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5YEp5wDfop_LUUZbk5wP-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5YEp5wDfop_LUUZbk5wP-4" target="5YEp5wDfop_LUUZbk5wP-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5YEp5wDfop_LUUZbk5wP-4" value="ISR and callback function triggered&lt;div&gt;usart_read_callback()&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="335" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5YEp5wDfop_LUUZbk5wP-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5YEp5wDfop_LUUZbk5wP-7" target="5YEp5wDfop_LUUZbk5wP-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5YEp5wDfop_LUUZbk5wP-7" value="Store character in cbuRX&amp;nbsp;&lt;div&gt;circular_buf_get()&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="435" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5YEp5wDfop_LUUZbk5wP-9" value="Restart read operation&amp;nbsp;&lt;div&gt;usart_read_buffer_job()&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="525" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5YEp5wDfop_LUUZbk5wP-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5YEp5wDfop_LUUZbk5wP-11" target="5YEp5wDfop_LUUZbk5wP-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5YEp5wDfop_LUUZbk5wP-11" value="program add string to cbufTX&lt;div&gt;SerialConsoleWriteString()&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="451" y="120" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5YEp5wDfop_LUUZbk5wP-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5YEp5wDfop_LUUZbk5wP-12" target="5YEp5wDfop_LUUZbk5wP-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5YEp5wDfop_LUUZbk5wP-12" value="Store Characters in &lt;code data-end=&quot;265&quot; data-start=&quot;257&quot;&gt;cbufTx&lt;/code&gt;&lt;div&gt;&lt;code data-end=&quot;265&quot; data-start=&quot;257&quot;&gt;circular_buf_put()&lt;/code&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="451" y="210" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5YEp5wDfop_LUUZbk5wP-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5YEp5wDfop_LUUZbk5wP-14" target="5YEp5wDfop_LUUZbk5wP-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5YEp5wDfop_LUUZbk5wP-14" value="Check USART Status&lt;div&gt;usart_get_job_status()&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="451" y="295" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5YEp5wDfop_LUUZbk5wP-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5YEp5wDfop_LUUZbk5wP-16" target="5YEp5wDfop_LUUZbk5wP-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5YEp5wDfop_LUUZbk5wP-16" value="Start Transmission&lt;div&gt;usart_write_buffer_job()&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="451" y="390" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5YEp5wDfop_LUUZbk5wP-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5YEp5wDfop_LUUZbk5wP-18" target="5YEp5wDfop_LUUZbk5wP-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5YEp5wDfop_LUUZbk5wP-18" value="Hardware Interrupt Triggered&lt;div&gt;SERCOM4_Handler&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="451" y="480" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5YEp5wDfop_LUUZbk5wP-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5YEp5wDfop_LUUZbk5wP-20" target="5YEp5wDfop_LUUZbk5wP-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5YEp5wDfop_LUUZbk5wP-20" value="Callback Triggered&lt;div&gt;usart_write_callback()&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="451" y="570" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5YEp5wDfop_LUUZbk5wP-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5YEp5wDfop_LUUZbk5wP-22" target="5YEp5wDfop_LUUZbk5wP-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5YEp5wDfop_LUUZbk5wP-22" value="Get Next Character&lt;div&gt;circular_buf_get()&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="451" y="660" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5YEp5wDfop_LUUZbk5wP-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5YEp5wDfop_LUUZbk5wP-24" target="5YEp5wDfop_LUUZbk5wP-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5YEp5wDfop_LUUZbk5wP-24" value="Transmit Next Character&lt;div&gt;usart_write_buffer_job()&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="451" y="750" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5YEp5wDfop_LUUZbk5wP-26" value="Character Displayed on PC&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="451" y="840" width="290" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
