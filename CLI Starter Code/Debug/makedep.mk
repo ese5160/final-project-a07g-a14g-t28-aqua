@@ -40,6 +40,8 @@ src\ASF\thirdparty\freertos\freertos-10.0.0\Source\timers.c
 
 src\CliThread\CliThread.c
 
+src\Debug\Debug.c
+
 src\SerialConsole\circular_buffer.c
 
 src\SerialConsole\SerialConsole.c

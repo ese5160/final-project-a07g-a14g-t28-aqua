@@ -61,7 +61,6 @@ static void configure_usart_callbacks(void);
 struct usart_module usart_instance;
 char rxCharacterBuffer[RX_BUFFER_SIZE]; 			   ///< Buffer to store received characters
 char txCharacterBuffer[TX_BUFFER_SIZE]; 			   ///< Buffer to store characters to be sent
-enum eDebugLogLevels currentDebugLevel = LOG_INFO_LVL; ///< Default debug level
 
 /******************************************************************************
  * Global Functions
@@ -128,32 +127,7 @@ int SerialConsoleReadCharacter(uint8_t *rxChar)
     return a;
 }
 
-/**
- * @brief Gets the current debug log level.
- * @return The current debug level.
- */
-enum eDebugLogLevels getLogLevel(void)
-{
-    return currentDebugLevel;
-}
 
-/**
- * @brief Sets the debug log level.
- * @param debugLevel The debug level to set.
- */
-void setLogLevel(enum eDebugLogLevels debugLevel)
-{
-    currentDebugLevel = debugLevel;
-}
-
-/**
- * @brief Logs a message at the specified debug level.
- */
-void LogMessage(enum eDebugLogLevels level, const char *format, ...)
-{
-    // Todo: Implement Debug Logger
-	// More detailed descriptions are in header file
-}
 
 /*
 COMMAND LINE INTERFACE COMMANDS
@@ -220,7 +194,11 @@ static void configure_usart_callbacks(void)
  *****************************************************************************/
 void usart_read_callback(struct usart_module *const usart_module)
 {
-	// ToDo: Complete this function 
+	// Simply put the received character into the circular buffer
+	circular_buf_put(cbufRx, (uint8_t)latestRx); // No need to check return value
+
+	// Restart the read job to continue receiving characters
+	usart_read_buffer_job(&usart_instance, (uint8_t *)&latestRx, 1);
 }
 
 /**************************************************************************/ 

@@ -503,6 +503,8 @@
       <Value>../src/CliThread</Value>
       <Value>../src/SerialConsole</Value>
       <Value>../src/ASF/thirdparty/freertos/freertos-10.0.0/Source/FreeRTOS-Plus-CLI</Value>
+      <Value>..</Value>
+      <Value>../src/Debug</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
   <armgcc.compiler.optimization.OtherFlags>-fdata-sections</armgcc.compiler.optimization.OtherFlags>
@@ -666,6 +668,8 @@
     <Folder Include="src\ASF\thirdparty\freertos\freertos-10.0.0\Source\portable\MemMang\" />
     <Folder Include="src\CliThread\" />
     <Folder Include="src\config\" />
+    <Folder Include="src\DebugLogger\" />
+    <Folder Include="src\Debug\" />
     <Folder Include="src\SerialConsole" />
   </ItemGroup>
   <ItemGroup>
@@ -1276,6 +1280,12 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\CliThread\CliThread.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Debug\Debug.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Debug\Debug.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\SerialConsole\circular_buffer.c">

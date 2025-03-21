@@ -86,3 +86,8 @@ The diagram is shown below
     Displays remaining memory after creating the task.
 
 One thread is started: The task vCommandConsoleTask.
+
+# Task 3
+
+Here I have finished the debugger module and add the comment in Doxygen style. I divided the code from the SerialConsole file to make the code clear. The following figure shows the structure of my debugger module.
+![The_structure_of_debugger_module](A07Gtask3.png)
