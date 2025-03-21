@@ -91,3 +91,20 @@ One thread is started: The task vCommandConsoleTask.
 
 Here I have finished the debugger module and add the comment in Doxygen style. I divided the code from the SerialConsole file to make the code clear. The following figure shows the structure of my debugger module.
 ![The_structure_of_debugger_module](A07Gtask3.png)
+
+
+# Task 4
+
+## 1. Question 
+
+### 1.What nets must you attach the logic analyzer to?
+
+To test the function of Uart. We should Connect the Saleae Logic 8 channels to TX, RX, and GND lines on the board. From the datasheet.
+
+### 2. Where on the circuit board can you attach / solder to?
+
+We can easily find Uart_Tx is pin2, Uart_RX is pin3. On the board, there is a section whose name is UART Debug. It has reserved GND, RX and TX pins. 
+
+### 3. What are critical settings for the logic analyzer?
+
+About the setting for the logic analyzer. I set the Saleae analyzer sampling rate to 2 MHz. I configure the saleae software to decode UART with Baud Rate: 115200, Data Bits: 8, Parity: None, Stop Bits: 1.
