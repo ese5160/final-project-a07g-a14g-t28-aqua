@@ -103,8 +103,46 @@ To test the function of Uart. We should Connect the Saleae Logic 8 channels to T
 
 ### 2. Where on the circuit board can you attach / solder to?
 
-We can easily find Uart_Tx is pin2, Uart_RX is pin3. On the board, there is a section whose name is UART Debug. It has reserved GND, RX and TX pins. 
+To find the answer to this question. I first focus on the file SerialConsole.c and find config_usart function.
 
+	config_usart.mux_setting = EDBG_CDC_SERCOM_MUX_SETTING;
+	config_usart.pinmux_pad0 = EDBG_CDC_SERCOM_PINMUX_PAD0;
+	config_usart.pinmux_pad1 = EDBG_CDC_SERCOM_PINMUX_PAD1;
+	config_usart.pinmux_pad2 = EDBG_CDC_SERCOM_PINMUX_PAD2;
+	config_usart.pinmux_pad3 = EDBG_CDC_SERCOM_PINMUX_PAD3;
+
+
+Then we need to usart.c and sercom.c to find the definition of SERCOM and PAD. Since we are using SAMD21 board, we can find the following code.
+
+    config->mux_setting = USART_RX_1_TX_2_XCK_3;
+
+    #define SERCOM4_PAD0_DEFAULT  PINMUX_PA12D_SERCOM4_PAD0  
+    #define SERCOM4_PAD1_DEFAULT  PINMUX_PA13D_SERCOM4_PAD1  
+    #define SERCOM4_PAD2_DEFAULT  PINMUX_PB10D_SERCOM4_PAD2
+    #define SERCOM4_PAD3_DEFAULT  PINMUX_PB11D_SERCOM4_PAD3
+
+Then we can make sure PB10 is TX, and PA13 is RX. 
+(Actually, since we just need to get the message from TX. So we can just connect the TX line and GND line.)
+![]()
 ### 3. What are critical settings for the logic analyzer?
 
-About the setting for the logic analyzer. I set the Saleae analyzer sampling rate to 2 MHz. I configure the saleae software to decode UART with Baud Rate: 115200, Data Bits: 8, Parity: None, Stop Bits: 1.
+About the setting for the logic analyzer.  I configure the saleae software to decode UART with Baud Rate: 115200, Data Bits: 8, Parity: None, Stop Bits: 1. The following figure shows the setting of my analyzer.
+![The_setting_of_analyser](setting.png)
+
+## 2. The connection
+
+The connection is shown as the following photo.
+![The_photo_of_connection](Connection.jpg)
+
+## 3. The Screenshot of decoded message
+
+The screenshot of the message is shown in the following.
+![The_screenshot_of_decoded_message](message.png)
+
+## 4. Capture file
+
+The capture file is saved in the current folder whose name is A07GTask4.sal
+![capture_file](A07GTask4.sal)
+
+
+# Task 5
