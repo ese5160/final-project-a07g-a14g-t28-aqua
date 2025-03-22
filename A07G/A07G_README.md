@@ -146,3 +146,15 @@ The capture file is saved in the current folder whose name is A07GTask4.sal
 
 
 # Task 5
+I have completed these two functions usart_read_callback and FreeRTOS_read functions and update them to Github repo.
+The following are screenshots of my functions.
+
+![usart_read_callback](A07Gtask5.1.png)
+
+![FreeRTOS_read](A07Gtask5.2.png)
+
+[usart_read_callback](usart_read_callback.c)
+
+[FreeRTOS_read](FreeRTOS_read.c)
+
+# Task 6
