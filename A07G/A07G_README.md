@@ -158,3 +158,7 @@ The following are screenshots of my functions.
 [FreeRTOS_read](FreeRTOS_read.c)
 
 # Task 6
+Here I have completed the coding part. I have updated the new Clithread.c and Clithread.h to Github repo.
+[Clithread.c](Clithread.c)
+
+[Clithread.h](Clithread.h)
