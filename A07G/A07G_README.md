@@ -39,7 +39,10 @@
 ![Block Diagram](block_diagram.png)
 
 ### Part 3
-![Flow Chart](block_diagram.png)
+![Flow Chart](Flow1.png)
+![Flow Chart](Flow2.png)
+![Flow Chart](Flow3.png)
+![Flow Chart](Flow4.png)
 
 # Task 2
 
