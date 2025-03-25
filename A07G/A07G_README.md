@@ -36,7 +36,10 @@
 8. SRS 08 (UV LED Safety Mechanism): The system shall disable the UV LED when the bottle cap is open or not securely fastened, ensuring user safety during UV activation.
 
 ### Part 2
+![Block Diagram](block_diagram.png)
 
+### Part 3
+![Flow Chart](block_diagram.png)
 
 # Task 2
 
@@ -141,7 +144,6 @@ To find the answer to this question. I first focus on the file SerialConsole.c a
 	config_usart.pinmux_pad2 = EDBG_CDC_SERCOM_PINMUX_PAD2;
 	config_usart.pinmux_pad3 = EDBG_CDC_SERCOM_PINMUX_PAD3;
 
-
     config->mux_setting = USART_RX_1_TX_2_XCK_3;
 
     #define SERCOM4_PAD0_DEFAULT  PINMUX_PA12D_SERCOM4_PAD0
@@ -150,7 +152,6 @@ To find the answer to this question. I first focus on the file SerialConsole.c a
     #define SERCOM4_PAD3_DEFAULT  PINMUX_PB11D_SERCOM4_PAD3
 
 Then we can make sure PB10 is TX, and PB11 is RX.
-
 
 ### 3. What are critical settings for the logic analyzer?
 
