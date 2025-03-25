@@ -191,4 +191,4 @@ Here I have completed the coding part. I have updated the new Clithread.c and Cl
 
 [Clithread.h](Clithread.h)
 
-The link to the video is [https://github.com/ese5160/final-project-a07g-a14g-t28-aqua.git](https://github.com/ese5160/final-project-a07g-a14g-t28-aqua.git)
+The link to the video is [https://github.com/ese5160/final-project-a07g-a14g-t28-aqua.git](https://drive.google.com/file/d/1se8SzzI50R0JJp0ZApbUdMW_BFg5L7sH/view?usp=sharing)](https://drive.google.com/file/d/1se8SzzI50R0JJp0ZApbUdMW_BFg5L7sH/view?usp=sharing)](https://github.com/ese5160/final-project-a07g-a14g-t28-aqua.git)
