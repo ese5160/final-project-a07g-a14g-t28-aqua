@@ -10,32 +10,33 @@
 
 ### Part 1
 
-## 1. Hardware Requirements Specification (HRS)
+#### Hardware Requirements Specification (HRS)
 
-1. HRS 01 (System Composition): The system shall be based on a customized PCB board with SAM W25 microcontroller,  tempertature sensor， pressure sensor and vibrating motor, fan, LCD screen, Total Dissolved Solids (TDS) water quality sensor, ensuring component compatibility.
+1. HRS 01 (System Composition): The system shall be based on a customized PCB board with SAM W25 microcontroller,  tempertature sensor， pressure sensor and vibrating motor, LCD screen, Total Dissolved Solids (TDS) water quality sensor, ensuring component compatibility.
 2. HRS 02 (Temperature): The testing range of the temperature sensor should be between 0-100°C, with an accuracy of ±5°C.
-3. HRS 03 (Construction)： Equip a BPA free plastic/steel cylindrical water bottle with a capacity of 500ml and construct an enclosing using 3D printing so that it houses all the sensors(Temperature, Pressure, TDS sensor), SAMW25 MCU and Lithium Ion battery. The aim is to make sure that the enclosing should occupy less than 1/3 of the bottle's volume which amounts to around 120mL. And the bottle internal water capacity should not exceed 500ml in order to prevent overflow and leakages.
+3. HRS 03 (Construction)： Equip a BPA free plastic/steel cylindrical water bottle with a capacity of 700ml and construct an enclosing using 3D printing so that it houses all the sensors(Temperature, Pressure, TDS sensor), SAMW25 MCU and Lithium Ion battery. The aim is to make sure that the enclosing should occupy less than 1/3 of the bottle's overall height(26cm) which amounts to around 8.6cm. Our plan is to add a TDS probe by making a hole in the bottle without any leakages and also add UV C LED for water purification mounting it safely without harmful exposure to the user.
 4. HRS 04 (Pressure sensor): The pressure sensor should have an accuracy capable of detecting changes in water volume as small as 10ml.
 5. HRS 05 (Waterproof requirement): The device should have good sealing, with all components not coming into direct contact with water, ensuring the safety of the drinking water in a bottle.
-6. HRS 06 (Fan): The fan installed at the bottom of the bottle is connected to a standard motor(3V, 25595 RPM) and we believe it should have strong power to stir 450ml water assuming mixing with protein powder of 20-30g.
-7. HRS07 (TDS water quality detecting): Obtain the TDS readings of water every 3-4 seconds from the sensor and make sure it can be displayed and used to actuate the UV LED in case of poor TDS values.
-8. HRS 08 (Connectivity): The voltage and current of all devices must be compatible, including operating voltage, operating current and GPIO voltage etc.
-9. HRS 09(Buttons): Equip the device with a manual power supply switch, giving users direct control over its power state and enhancing energy efficiency. Also, equip the device with a switch to control a DC motor which functions as a stirrer and also to control a switch which switches the UV LED at various intervals based on TDS sensor data.
-10. HRS 10 : Utilize LED indicators to visually signal a single device status based on the sensor data and user's last use.
-11. HRS 11(Safety): Ensure a cutoff/design to incorporate UV sensor to be turned OFF if the user opens the bottle cap in order to prevent user exposure to harmful UV-C light.
-12. HRS 12(TFT LCD Display): The LCD display should be mounted along with all other sensors in the enclosing at the bottom of the bottle and should display the user the readings of temperature, and TDS of the water updated every 30 seconds.
-13. HRS 13 (Vibration Motor): The system shall include a vibration motor capable of producing sufficient vibration to notify the user to drink water at regular intervals. The motor shall be integrated into the bottle to ensure noticeable vibration without affecting the bottle's stability or usability.
+6. HRS06 (TDS water quality detecting): Obtain the TDS readings of water every 3-4 seconds from the sensor and make sure it can be displayed and used to actuate the UV LED in case of poor TDS values.
+7. HRS 07 (Connectivity): The voltage and current of all devices must be compatible, including operating voltage, operating current and GPIO voltage etc.
+8. HRS 08 : Utilize LED indicators to visually signal a single device status based on the sensor data and user's last use.
+9. HRS 09(Safety): Ensure a cutoff/design to incorporate UV sensor to be turned OFF if the user opens the bottle cap in order to prevent user exposure to harmful UV-C light.
+10. HRS 10(TFT LCD Display): The LCD display should be mounted along with all other sensors in the enclosing at the bottom of the bottle and should display the user the readings of temperature, and TDS of the water updated every 30 seconds.
+11. HRS 11 (Vibration Motor): The system shall include a vibration motor capable of producing sufficient vibration to notify the user to drink water at regular intervals. The motor shall be integrated into the bottle to ensure noticeable vibration without affecting the bottle's stability or usability.
 
-### 2. Software Requirements Specification (SRS)
+#### Software Requirements Specification (SRS)
 
 1. SRS 01 (Data and Visualization): The system shall enable users to access real-time hydration status, water temperature, and usage patterns via a smartphone application.
-2. SRS 02 (Control): The application shall allow users to configure and control system settings, including setting hydration goals, customizing LED notifications, and enabling or disabling reminders.
+2. SRS 02 (Control): The application shall allow users to configure and control system settings, including setting hydration goals, customizing LED notifications, and enabling or disabling reminders. The user should also be able to independently control the function of the UV C LED and turn it ON or OFF when required.
 3. SRS 03 (Data Monitoring and Logging): The software shall log all captured data, including water consumption, water temperature, and TDS water quality measurements, to a cloud-based storage for tracking and analysis.
 4. SRS 04 (Hydration Notifications): The system shall send push notifications to remind users to drink water based on their set hydration goals, historical trends, and real-time environmental data.
-5. SRS 05 (Water Quality Detection): The system shall periodically measure and log water quality using integrated sensors, alerting users when the water quality drops below a predefined threshold.
-6. SRS 06 (Hydration Goal Achievement Feedback): The system shall provide feedback on the user’s progress toward their hydration goals, including congratulatory messages when goals are achieved and encouraging messages when goals are missed.
+5. SRS 05 (Water Quality Detection): The system shall periodically measure and log water quality using integrated sensors, alerting users when the water quality drops below a predefined threshold. The system should also turn ON the UV C LED based on the readings of the TDS sensor and notify the user.
+6. SRS 06 (Hydration Goal Achievement Feedback): The system shall provide feedback on the user’s progress toward their hydration goals, including congratulatory messages when goals are achieved and encouraging messages when goals are missed. The vibration motor should be turned ON to provide vibration feedback to the user.
 7. SRS 07 (UV LED Status Notification): The smartphone application shall display real-time UV LED status (e.g., active, inactive, or fault) to inform the user when the purification process is in progress or completed.
 8. SRS 08 (UV LED Safety Mechanism): The system shall disable the UV LED when the bottle cap is open or not securely fastened, ensuring user safety during UV activation.
+
+### Part 2
+
 
 # Task 2
 
