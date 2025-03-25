@@ -140,7 +140,6 @@ To find the answer to this question. I first focus on the file SerialConsole.c a
 	config_usart.pinmux_pad2 = EDBG_CDC_SERCOM_PINMUX_PAD2;
 	config_usart.pinmux_pad3 = EDBG_CDC_SERCOM_PINMUX_PAD3;
 
-Then we need to usart.c and sercom.c to find the definition of SERCOM and PAD. Since we are using SAMD21 board, we can find the following code.
 
     config->mux_setting = USART_RX_1_TX_2_XCK_3;
 
@@ -149,9 +148,8 @@ Then we need to usart.c and sercom.c to find the definition of SERCOM and PAD. S
     #define SERCOM4_PAD2_DEFAULT  PINMUX_PB10D_SERCOM4_PAD2
     #define SERCOM4_PAD3_DEFAULT  PINMUX_PB11D_SERCOM4_PAD3
 
-Then we can make sure PB10 is TX, and PA13 is RX.
-(Actually, since we just need to get the message from TX. So we can just connect the TX line and GND line.)
-![]()
+Then we can make sure PB10 is TX, and PB11 is RX.
+
 
 ### 3. What are critical settings for the logic analyzer?
 
@@ -192,3 +190,5 @@ Here I have completed the coding part. I have updated the new Clithread.c and Cl
 [Clithread.c](Clithread.c)
 
 [Clithread.h](Clithread.h)
+
+The link to the video is [https://github.com/ese5160/final-project-a07g-a14g-t28-aqua.git](https://github.com/ese5160/final-project-a07g-a14g-t28-aqua.git)
